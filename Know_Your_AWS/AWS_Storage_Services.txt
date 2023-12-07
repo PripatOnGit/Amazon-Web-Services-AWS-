@@ -1,0 +1,124 @@
+
+Amazon Simple Storage Service (S3)
+-------------------------------------
+Amazon S3 is object storage built to store and retrieve any amount of data from anywhere – web sites and mobile apps, corporate applications, and data from IoT sensors or devices.
+
+You can store any type of file in S3.
+
+S3 is designed to deliver 99.999999999% durability, and stores data for millions of applications used by market leaders in every industry.
+
+S3 provides comprehensive security and compliance capabilities that meet even the most stringent regulatory requirements.
+
+S3 gives customers flexibility in the way they manage data for cost optimization, access control, and compliance.
+
+Typical use cases include:
+---------------------------
+Backup and Storage – Provide data backup and storage services for others.
+Application Hosting – Provide services that deploy, install, and manage web applications.
+Media Hosting – Build a redundant, scalable, and highly available infrastructure that hosts video, photo, or music uploads and downloads.
+Software Delivery – Host your software applications that customers can download.
+Static Website – you can configure a static website to run from an S3 bucket.
+S3 provides query-in-place functionality, allowing you to run powerful analytics directly on your data at rest in S3. And Amazon S3 is the most supported cloud storage service available, with integration from the largest community of third-party solutions, systems integrator partners, and other AWS services.
+
+Files can be anywhere from 0 bytes to 5 TB.
+
+There is unlimited storage available.
+
+Files are stored in buckets.
+
+Buckets are root level folders.
+
+Any subfolder within a bucket is known as a “folder”.
+
+S3 is a universal namespace so bucket names must be unique globally.
+
+There are seven S3 storage classes.
+----------------------------------
+S3 Standard (durable, immediately available, frequently accessed).
+S3 Intelligent-Tiering (automatically moves data to the most cost-effective tier).
+S3 Standard-IA (durable, immediately available, infrequently accessed).
+S3 One Zone-IA (lower cost for infrequently accessed data with less resilience).
+S3 Glacier Instant Retrieval (data that is rarely accessed and requires retrieval in milliseconds).
+S3 Glacier Flexible Retrieval (archived data, retrieval times in minutes or hours).
+S3 Glacier Deep Archive (lowest cost storage class for long term retention).
+
+AWS Snowball
+-------------
+With AWS Snowball (Snowball), you can transfer hundreds of terabytes or petabytes of data between your on-premises data centers and Amazon Simple Storage Service (Amazon S3).
+
+Uses a secure storage device for physical transportation.
+
+AWS Snowball Client is software that is installed on a local computer and is used to identify, compress, encrypt, and transfer data.
+
+Uses 256-bit encryption (managed with the AWS KMS) and tamper-resistant enclosures with TPM.
+
+The table below describes the AWS Snow offerings at a high-level:
+
+Service	What it Is
+AWS Snowball	Bulk data transfer, edge storage, and edge compute
+AWS Snowmobile	A literal shipping container full of storage (up to 100PB) and a truck to transport it
+AWS Snowcone	The smallest device in the range that is best suited for outside the data center
+Snowball can import to S3 or export from S3.
+
+Import/export is when you send your own disks into AWS – this is being deprecated in favor of Snowball.
+
+Snowball must be ordered from and returned to the same region.
+
+To speed up data transfer it is recommended to run simultaneous instances of the AWS Snowball Client in multiple terminals and transfer small files as batches.
+
+Amazon Elastic Block Store (EBS)
+--------------------------------
+Amazon Elastic Block Store (Amazon EBS) provides persistent block storage volumes for use with Amazon EC2 instances in the AWS Cloud.
+
+Each Amazon EBS volume is automatically replicated within its Availability Zone to protect you from component failure, offering high availability and durability.
+
+Amazon EBS volumes offer the consistent and low-latency performance needed to run your workloads. With Amazon EBS, you can scale your usage up or down within minutes – all while paying a low price for only what you provision.
+
+Instance Store Volumes
+-----------------------
+Instance store volumes are high performance local disks that are physically attached to the host computer on which an EC2 instance runs.
+
+Instance stores are ephemeral which means the data is lost when powered off (non-persistent).
+
+Instances stores are ideal for temporary storage of information that changes frequently, such as buffers, caches, or  scratch data.
+
+Instance store volume root devices are created from AMI templates stored on S3.
+
+Instance store volumes cannot be detached/reattached.
+
+
+Amazon Elastic File System (EFS)
+--------------------------------
+EFS is a fully managed service that makes it easy to set up and scale file storage in the Amazon Cloud.
+
+Good for big data and analytics, media processing workflows, content management, web serving, home directories etc.
+
+EFS uses the NFS protocol.
+
+Pay for what you use (no pre-provisioning required).
+
+Can scale up to petabytes.
+
+EFS is elastic and grows and shrinks as you add and remove data.
+
+Can concurrently connect 1 to 1000s of EC2 instances, from multiple AZs.
+
+A file system can be accessed concurrently from all AZs in the region where it is located.
+
+By default you can create up to 10 file systems per account.
+
+On-premises access can be enabled via Direct Connect or AWS VPN.
+
+Can choose General Purpose or Max I/O (both SSD).
+
+The VPC of the connecting instance must have DNS hostnames enabled.
+
+EFS provides a file system interface, file system access semantics (such as strong consistency and file locking).
+
+Data is stored across multiple AZs within a region.
+
+Read after write consistency.
+
+Need to create mount targets and choose AZs to include (recommended to include all AZ’s).
+
+Instances can be behind an ELB.

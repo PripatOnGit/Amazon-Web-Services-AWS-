@@ -1,0 +1,10 @@
+1. set up a AWS free tier account:  https://www.geeksforgeeks.org/amazon-web-services-aws-free-tier-account-set-up/ 
+
+2. setup command line interface(CLI): https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html
+
+
+cheatSheets:
+AWS Cloud Computing Concepts Cheat Sheet: https://digitalcloud.training/aws-cloud-computing-concepts/
+AWS infrastructure: https://digitalcloud.training/aws-global-infrastructure/
+AWS billing and pricing: https://digitalcloud.training/aws-billing-and-pricing/
+AWS_IAM: https://digitalcloud.training/aws-identity-and-access-management/
